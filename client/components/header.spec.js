@@ -15,8 +15,21 @@ describe('Header', () => {
   beforeEach(() => {
     header=shallow(<Header />)
   })
-
-  it('renders and h1 for testing', () => {
+  // -header
+  // -bar
+  // -logo
+  // -locations?
+  // -button
+  // -bar
+  it('is surrounded by bars', () => {
+    expect(header.find('#header').children().first().is('.bar')).to.equal(true)
+    expect(header.find('#header').children().last().is('.bar')).to.equal(true)
+  })
+  xit('lists out locations', () => {
     expect(header.find('h1').text()).to.be.equal("I'm Being Helpful!")
   })
+  xit('has a contact button', () => {
+    expect(header.find('h1').text()).to.be.equal("I'm Being Helpful!")
+  })
+  xit('placeholder', () => true)
 })
