@@ -3,18 +3,42 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { logout } from '../store'
+import { Button } from 'react-bootstrap'
+
+const barStyle = {
+  backgroundColor: 'lightblue',
+  height: '75px',
+  width: '100%'
+}
 
 const Navbar = ({ handleClick, isLoggedIn }) => (
   <div>
-    <h1>BOILERMAKER</h1>
-    <nav>
-      <div>
-        {/* The navbar will show these links after you log in */}
-        <Link to="/">Home</Link>
-        <Link to="/contact">Contact</Link>
+    <div id="header" style={{ display: 'flex', flexDirection: 'column' }}>
+      <div className="bar" style={barStyle} />
+      <img src="./assets/MobileLogo.svg" style={{ height: '20em', zIndex: '4', marginTop: '-4em', marginBottom: '-1em' }} />
+      <div style={{ display: 'flex', flexDirection: 'column', alignContent: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+          <h3>Chiropractic</h3>
+          <h3>Medical</h3>
+          <h3>Rehab</h3>
+          <h3>Massage</h3>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+          <h3>Injury Prevention</h3>
+          <h3>On-Site Therapy</h3>
+          <h3>Wellness Screenings</h3>
+        </div>
       </div>
-    </nav>
-    <hr />
+      <div className="bar" style={{...barStyle, marginTop:'1em'}}>
+        <nav>
+          <div style={{ display: 'flex', justifyContent: 'space-around'}}>
+            {/* The navbar will show these links after you log in */}
+            <Link to="/"><Button>Home</Button></Link>
+            <Link to="/contact"><Button>Contact</Button></Link>
+          </div>
+        </nav>
+      </div>
+    </div>
   </div>
 )
 
