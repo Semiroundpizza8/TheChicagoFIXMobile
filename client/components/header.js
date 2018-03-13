@@ -2,13 +2,17 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 export const Header = function () {
+  const barStyle = {
+    backgroundColor: 'lightblue',
+    height: '75px',
+    width: '100%'
+  }
   return (
-    <div id="header">
-      <div className="bar" />
-      <img src="./assets/MobileLogo.svg" />
+    <div id="header" style={{ display: 'flex', flexDirection: 'column' }}>
+      <div className="bar" style={barStyle} />
+      <img src="./assets/MobileLogo.svg" style={{ height: '16em', zIndex: '4', marginTop: '-4em'}} />
       <button>Contact</button>
-      <h1>I'm Being Helpful!</h1>
-      <div className="bar" />
+      <div className="bar" style={barStyle} />
     </div>
   )
 }
