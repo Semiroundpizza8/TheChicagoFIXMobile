@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 export const Header = function () {
   const barStyle = {
-    backgroundColor: 'lightblue',
+    backgroundColor: '#27aae1',
     height: '75px',
     width: '100%'
   }

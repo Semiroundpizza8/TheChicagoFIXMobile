@@ -1,15 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-export const Header = function () {
+export const Footer = function () {
   const barStyle = {
-    backgroundColor: 'lightblue',
+    backgroundColor: '#27aae1',
     height: '75px',
-    width: '100%'
+    width: '100%',
+    textAlign: 'center',
+    color: 'white'
   }
   return (
-    <footer>
-    </footer>
+    <div style={barStyle}>
+      <h5 style={{ paddingTop: '1.25em'}}>By Benjamin Odisho</h5>
+      <h5>Please visit our sister site TheChicagoFIX.com</h5>
+    </div>
   )
 }
 
@@ -21,4 +25,4 @@ const mapDispatch = function () {
 
 }
 
-export default connect(null, null)(Header)
+export default connect(null, null)(Footer)
