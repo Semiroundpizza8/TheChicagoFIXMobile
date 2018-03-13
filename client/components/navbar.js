@@ -15,23 +15,28 @@ const Navbar = ({ handleClick, isLoggedIn }) => (
   <div>
     <div id="header" style={{ display: 'flex', flexDirection: 'column' }}>
       <div className="bar" style={barStyle} />
-      <img src="./assets/MobileLogo.svg" style={{ height: '17.5em', zIndex: '4', marginTop: '-4em', marginBottom: '-1em' }} />
-      <div style={{ display: 'flex', flexDirection: 'column', alignContent: 'center' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-around', color: '#ed1c24'}}>
+      <img src="./assets/MobileLogo.svg" style={{ height: '17.5em', zIndex: '4', marginTop: '-4em', marginBottom: '0em' }} />
+      <div style={{ display: 'flex', flexDirection: 'column', alignContent: 'center', width: '75%', margin: 'auto'}}>
+        <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'baseline', color: '#ed1c24'}}>
           <h3>Chiropractic</h3>
+          <img src="./assets/star.svg" style={{height: '20px', width: '20px'}}/>
           <h3>Medical</h3>
+          <img src="./assets/star.svg" style={{height: '20px', width: '20px'}}/>
           <h3>Rehab</h3>
+          <img src="./assets/star.svg" style={{height: '20px', width: '20px'}}/>
           <h3>Massage</h3>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-around', color: '#ed1c24'}}>
+        <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'baseline', color: '#ed1c24' }}>
           <h3>Injury Prevention</h3>
+          <img src="./assets/star.svg" style={{height: '20px', width: '20px'}}/>
           <h3>On-Site Therapy</h3>
+          <img src="./assets/star.svg" style={{height: '20px', width: '20px'}}/>
           <h3>Wellness Screenings</h3>
         </div>
       </div>
-      <div className="bar" style={{...barStyle, marginTop:'1em'}}>
+      <div className="bar" style={{ ...barStyle, marginTop: '1em' }}>
         <nav>
-          <div style={{ display: 'flex', justifyContent: 'space-around'}}>
+          <div style={{ display: 'flex', justifyContent: 'space-around' }}>
             {/* The navbar will show these links after you log in */}
             <Link to="/"><Button bsSize="large">Home</Button></Link>
             <Link to="/contact"><Button bsSize="large">Contact</Button></Link>
