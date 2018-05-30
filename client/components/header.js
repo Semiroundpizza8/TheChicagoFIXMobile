@@ -6,7 +6,7 @@ export const Header = function () {
     <div id="header" style={{ display: 'flex', flexDirection: 'column' }}>
       <img src="./assets/MobileLogo.svg" style={{ height: '20em', zIndex: '-4', marginTop: '-6em', marginBottom: '-1em' }} />
       <img src="./assets/MobileLogo.svg" style={{ height: '20em', zIndex: '4', marginTop: '-6em', marginBottom: '-1em' }} />
-      {/* <div style={{ display: 'flex', flexDirection: 'column', alignContent: 'center' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignContent: 'center' }}>
         <div style={{ display: 'flex', justifyContent: 'space-around'}}>
           <h3>Chiropractic</h3>
           <h3>Medical</h3>
@@ -18,7 +18,7 @@ export const Header = function () {
           <h3>On-Site Therapy</h3>
           <h3>Wellness Screenings</h3>
         </div>
-      </div> */}
+      </div>
     </div>
   )
 }
