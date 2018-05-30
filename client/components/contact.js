@@ -15,7 +15,6 @@ export class Contact extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit() {
-    event.preventDefault();
     const body = {
       email: this.state.email,
       name: this.state.name,
@@ -30,7 +29,6 @@ export class Contact extends React.Component {
       <h1 style={{ textAlign: 'center', marginTop: '1.5em', marginBottom: '1em' }}>Contact Us Today</h1>
       <div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: '2em' }}>
         <img src="./assets/adjustTable.jpg" style={{ height: '200px' }} />
-        <img src="./assets/rally.jpg" style={{ height: '200px' }} />
         <img src="./assets/busSide.jpg" style={{ height: '200px' }} />
       </div>
       <h2 style={{ textAlign: 'center', marginBottom: '1em' }}>Call 855-4TheFIX or email Info@TheChicagoFIX.com</h2>
