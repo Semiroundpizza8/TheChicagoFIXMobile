@@ -1,13 +1,14 @@
 import React from 'react'
-import {Navbar, Footer} from './components'
+import {Hero, NewContact, Body, Footer} from './components'
 import Routes from './routes'
 
 
 const App = () => {
   return (
     <div>
-      <Navbar />
-      <Routes />
+      <Hero />
+      <Body />
+      <NewContact />
       <Footer />
     </div>
   )

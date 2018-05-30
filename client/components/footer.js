@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 export const Footer = function () {
   const barStyle = {
-    backgroundColor: '#27aae1',
+    backgroundColor: 'black',
     height: '75px',
     width: '100%',
     textAlign: 'center',
@@ -11,7 +11,7 @@ export const Footer = function () {
   }
   return (
     <div style={barStyle}>
-      <h5 style={{ paddingTop: '1.25em'}}>By Benjamin Odisho</h5>
+      <h5 style ={{ marginTop: '0px' }}>By Benjamin Odisho</h5>
       <h5>Please visit our sister site TheChicagoFIX.com</h5>
     </div>
   )
