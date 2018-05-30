@@ -21,7 +21,7 @@ describe('Header', () => {
   // -locations?
   // -button
   // -bar
-  it('is surrounded by bars', () => {
+  xit('is surrounded by bars', () => {
     expect(header.find('#header').children().first().is('.bar')).to.equal(true)
     expect(header.find('#header').children().last().is('.bar')).to.equal(true)
   })
