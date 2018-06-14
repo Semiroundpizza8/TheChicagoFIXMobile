@@ -1,5 +1,11 @@
+// Util Libs
 import React from 'react';
 import { connect } from 'react-redux';
+
+// Components
+import { Hero } from './';
+
+// CSS
 import { Header } from './';
 import { Glyphicon } from 'react-bootstrap';
 
@@ -13,6 +19,7 @@ export const Home = function () {
 
   return (
     <div>
+      <Hero />
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <h1 style={{ textAlign: 'center', marginTop: '1.5em', marginBottom: '1em' }}>What Our Team Brings To Your Team</h1>
         <hr />
