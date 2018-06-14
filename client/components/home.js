@@ -20,38 +20,6 @@ export const Home = function () {
   return (
     <div>
       <Hero />
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <h1 style={{ textAlign: 'center', marginTop: '1.5em', marginBottom: '1em' }}>What Our Team Brings To Your Team</h1>
-        <hr />
-        <div className="Body" style={{ display: 'flex', margin: "0% 10% 0% 10%" }}>
-          <div className="Images">
-            <img src="./assets/busInside.jpg" style={{ height: '300px' }} />
-            <img src="./assets/stim.jpg" style={{ height: '300px' }} />
-          </div>
-          <ul className="Info" style={{ listStyle: 'none', marginTop: '0px' }}>
-            {info.map(segment => (
-              <li key={segment.key}>
-                <h2 style={{ marginTop: '0px' }}>{segment.title}</h2>
-                <p>{segment.body}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div style={{ listStyle: 'none', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'column', marginTop: '2em' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-around', marginLeft: "5%", marginRight: "5%", color: '#f15a29' }}>
-            <h4><Glyphicon glyph="arrow-down" /> EMR</h4>
-            <h4><Glyphicon glyph="arrow-down" /> OSHA Rates</h4>
-            <h4><Glyphicon glyph="arrow-down" /> Work Comp Premiums</h4>
-            <h4><Glyphicon glyph="arrow-down" /> Cost Work</h4>
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'space-around', marginLeft: "5%", marginRight: "5%", marginBottom: '2.5%', color: "#f9931e" }}>
-            <h4><Glyphicon glyph="arrow-up" /> Work Site Safety</h4>
-            <h4><Glyphicon glyph="arrow-up" /> Employee Wellness</h4>
-            <h4><Glyphicon glyph="arrow-up" /> Increase Productivity</h4>
-            <h4><Glyphicon glyph="arrow-up" /> Open New Jobs</h4>
-          </div>
-        </div>
-      </div>
     </div>
   )
 }

@@ -12,7 +12,7 @@ const barStyle = {
 }
 
 const NavbarComponent = ({ handleClick, isLoggedIn }) => (
-    <Navbar inverse collapseOnSelect>
+    <Navbar inverse collapseOnSelect style={{ marginBottom: '0px' }}>
       <Navbar.Header>
         <Navbar.Brand>
         <img src="./assets/MobileLogo.svg" style={{ height: '5em', zIndex: '4' }} />

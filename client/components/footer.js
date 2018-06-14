@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 export const Footer = function () {
   const barStyle = {
-    backgroundColor: '#27aae1',
+    backgroundColor: 'black',
     height: '75px',
     width: '100%',
     textAlign: 'center',
