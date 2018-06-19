@@ -12,9 +12,9 @@ const textFlexContainer = {
 
 const blackTextboxContainers = {
   ...textFlexContainer,
-  backgroundColor: 'black',
+  backgroundColor: '#0e121c',
   color: 'white',
-  height: '80vh',
+  height: '60vh',
   width: '100vw'
 };
 
@@ -31,7 +31,8 @@ const offwhiteTextboxContainers = {
   backgroundColor: '#dddddd',
   color: 'black',
   height: '30vh',
-  width: '100vw'
+  width: '100vw',
+  display: 'flex'
 };
 
 const carouselImageCreator = (url, header, text) => {
@@ -53,23 +54,41 @@ const carouselImageCreator = (url, header, text) => {
   )
 };
 
-const pictureBackgroundCreator = (url, header, text) => {
+const pictureBackgroundCreator = (url, header, text, left) => {
   let imageBackgroundStyle = {
     ...textFlexContainer,
     backgroundImage: `url(${url})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    color: 'white',
-    width: '50vw',
+    width: '40vw',
     height: '40vh'
   };
 
-  return (
-    <div style={imageBackgroundStyle}>
-      <h1>{header}</h1>
-      <p>{text}</p>
+  let sideBlock = {
+    backgroundColor: '#0e121c',
+    color: 'white',
+    width: '60vw',
+    height: '40vh',
+    padding: '3vw'
+  }
+  return left ? (
+    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', flexWrap: 'wrap' }}>
+      <div style={sideBlock}>
+        <h1>{header}</h1>
+        <p>{text}</p>
+      </div>
+      <div style={imageBackgroundStyle} />
     </div>
-  )
+  ) : (
+      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', flexWrap: 'wrap' }}>
+        <div style={imageBackgroundStyle} />
+        <div style={sideBlock}>
+          <h1>{header}</h1>
+          <p>{text}</p>
+        </div>
+      </div>
+    )
+
 }
 
 export const LandingPage = () => {
@@ -78,15 +97,15 @@ export const LandingPage = () => {
 
       {/* Carousel Hero Image */}
       <Carousel>
-        {carouselImageCreator('./assets/busSide.jpg', 'First slide label', 'Nulla vitae elit libero, a pharetra augue mollis interdum.')}
-        {carouselImageCreator('./assets/busSide.jpg', 'Second slide label', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')}
-        {carouselImageCreator('./assets/busSide.jpg', 'Third slide label', 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.')}
+        {carouselImageCreator('./assets/busSide.jpg', 'Injury & Illness Prevention', 'Nulla vitae elit libero, a pharetra augue mollis interdum.')}
+        {carouselImageCreator('./assets/busSide.jpg', 'Ergonomics', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')}
+        {carouselImageCreator('./assets/busSide.jpg', 'Wellness Services', 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.')}
       </Carousel>
 
       {/* Top Description */}
       <div style={blackTextboxContainers} >
-        <h1>Lorem Ipsum</h1>
-        <p>We will teach your employees proper lifting and moving techniques in order to avoid the most common workplace injuries including low back pain, cervical strain, and repetitive injuries.</p>
+        <h1>Using a proactive approach to sports medicine to prevent injuries and keep employees performing at their best.</h1>
+        <p>At the Chicago FIX Mobile we bring the same treatment that professional athletes use to stay at the top of their game right to your jobsite to keep your employees performing at the top of theirs.</p>
         <div style={{ listStyle: 'none', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'column', marginTop: '2em' }}>
           <div style={{ display: 'flex', justifyContent: 'space-around', marginLeft: "5%", marginRight: "5%", color: '#f15a29' }}>
             <h4><Glyphicon glyph="arrow-down" /> EMR</h4>
@@ -104,26 +123,23 @@ export const LandingPage = () => {
       </div >
 
       {/* Side-By-Side */}
-      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', flexWrap: 'wrap' }}>
-        {pictureBackgroundCreator('./assets/Orange1.jpg', 'Immediate Injury Assessment', 'We will be there to assess and treat on –site any musculoskeletal injuries that may be plaguing your employees. With us, your employees will avoid the long wait times of the emergency departments and walk-in clinics as well as avoiding unnecessary medical treatment.')}
-        {pictureBackgroundCreator('./assets/Red1.jpg', 'Wellness Screenings', 'We will come to your offices or jobsites and screen your employees’ vital signs, cholesterol levels, and blood glucose levels. Our staff will then advise your employees on what is needed in order to get their levels to an appropriate healthy level.')}
-        {pictureBackgroundCreator('./assets/Red2.jpg', 'Job Specific Strength/Conditioning', 'Our certified personal trainers will come out to your jobsites to lead your employees in a group stretch and warm sessions in order to prepare their bodies for an injury free work day. Our trainers will stay on site to advise your employees on appropriate fitness and diet routines to reach their goals in a healthy and sustainable manner.')}
-        {pictureBackgroundCreator('./assets/Orange2.jpg', 'Preventative Care', 'We will teach your employees proper lifting and moving techniques in order to avoid the most common workplace injuries including low back pain, cervical strain, and repetitive injuries.')}
-      </div >
+      {pictureBackgroundCreator('./assets/Orange1.jpg', 'Immediate Injury Assessment', 'We will be there to assess and treat on –site any musculoskeletal injuries that may be plaguing your employees. With us, your employees will avoid the long wait times of the emergency departments and walk-in clinics as well as avoiding unnecessary medical treatment.', true)}
+      {pictureBackgroundCreator('./assets/Red1.jpg', 'Wellness Screenings', 'We will come to your offices or jobsites and screen your employees’ vital signs, cholesterol levels, and blood glucose levels. Our staff will then advise your employees on what is needed in order to get their levels to an appropriate healthy level.')}
+      {pictureBackgroundCreator('./assets/Red2.jpg', 'Job Specific Strength/Conditioning', 'Our certified personal trainers will come out to your jobsites to lead your employees in a group stretch and warm sessions in order to prepare their bodies for an injury free work day. Our trainers will stay on site to advise your employees on appropriate fitness and diet routines to reach their goals in a healthy and sustainable manner.', true)}
+      {pictureBackgroundCreator('./assets/Orange2.jpg', 'Preventative Care', 'We will teach your employees proper lifting and moving techniques in order to avoid the most common workplace injuries including low back pain, cervical strain, and repetitive injuries.')}
 
-      {/* Top Description */}
+      {/* Testimonial */}
       <div style={offwhiteTextboxContainers} >
-        <h1>Lorem Ipsum</h1>
-        <p>We will teach your employees proper lifting and moving techniques in order to avoid the most common workplace injuries including low back pain, cervical strain, and repetitive injuries.</p>
+        <h1>Testimonials</h1>
+        <p style={{width: '33vw'}}>“We have been working with Dr. O and his staff for two years.  Our field workers have really appreciated the opportunity to receive treatment for their aches and pains right on the jobsite.  Each year our safety statistics have improved, and in 2017 we recorded zero lost work days!” - Steven Brazel, John Burns Construction Company Safety Director </p>
       </div >
 
 
-      {/* Clients */}
+      {/* Contact */}
       < div style={textFlexContainer} >
-        < h1 >Lorem Ipsum</h1 >
+        < h1 >Contact</h1 >
         <p>Placeholder for clients section</p>
       </div >
-      {/* Contact CTA */}
     </div >
   )
 }
