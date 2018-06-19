@@ -10,4 +10,8 @@ export {default as Home} from './home'
 export {default as Contact} from './contact'
 export {default as Header} from './header'
 export {default as Footer} from './footer'
-export {default as Hero} from './hero'
+
+// Components for home page
+export {default as CarouselComponent } from './HomeComponents/carouselComponent';
+export {default as MainInfo} from './HomeComponents/mainInfo';
+export {default as PictureInfo} from './HomeComponents/PictureInfo';
