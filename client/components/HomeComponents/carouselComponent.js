@@ -26,7 +26,7 @@ const carouselImageCreator = (url, header, text) => {
 export const CarouselComponent = () => (
   <Carousel>
     {carouselImageCreator('./assets/pictures/DSC_0426_long.jpg', 'Injury & Illness Prevention', '')}
-    {carouselImageCreator('./assets/pictures/DSC_0558_long.jpg', 'Ergonomics', '')}
+    {carouselImageCreator('./assets/pictures/DSC_0524_long.jpg', 'Ergonomics', '')}
     {carouselImageCreator('./assets/pictures/DSC_0580_long.jpg', 'Wellness Services', '')}
   </Carousel>
 )

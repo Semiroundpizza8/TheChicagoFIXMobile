@@ -6,6 +6,12 @@ h1 {
   font-family: 'Roboto', sans-serif !important;
 }
 
+html, body. div{
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+}
+
 a {
   text-decoration: none;
 }

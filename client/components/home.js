@@ -15,7 +15,7 @@ const offwhiteTextboxContainers = {
   ...textFlexContainer,
   backgroundColor: '#dddddd',
   color: 'black',
-  height: '30vh',
+  height: 'auto',
   width: '100vw',
   display: 'flex'
 };
