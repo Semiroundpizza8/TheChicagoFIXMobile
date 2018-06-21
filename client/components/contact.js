@@ -39,7 +39,7 @@ export class Contact extends React.Component {
           <textarea value={this.state.content} onChange={(e) => { this.setState({ content: e.target.value }) }} style={{ border: '1px solid #88D5E9', marginBottom: '3em', width: '70vw' }} />
           <input type="submit" style={{ marginBottom: '3em', width: '100px' }} />
         </form>
-        <h4 style={{ textAlign: 'center', marginBottom: '1em' }}>Call 855-4TheFIX or email Info@TheChicagoFIXMobile.com <br />to bring our premier healthcare to your job site today!</h4>
+        <h4 style={{ textAlign: 'center', marginBottom: '1em' }}>Call <span style={{ color: '#f9931e' }}>855-4TheFIX</span> or email <span style={{ color: '#f9931e' }}>Info@TheChicagoFIXMobile.com</span><br />to bring our premier healthcare to your job site today!</h4>
       </div>
     )
   }

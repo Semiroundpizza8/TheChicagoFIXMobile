@@ -85,8 +85,7 @@ export const mainInfo = () => (
             </div>
           </div>
           <div>
-            <h3 style={{ textAlign: 'left', marginBottom: '1em', fontSize: '145%' }}>Call 855-4TheFIX or email Info@TheChicagoFIXMobile.com<br />to bring our premier healthcare to your job site today!</h3>
-
+            <h3 style={{ textAlign: 'left', marginBottom: '1em', fontSize: '145%' }}>Call <span style={{ color: '#f9931e' }}>855-4TheFIX</span> or email <span style={{ color: '#f9931e' }}>Info@TheChicagoFIXMobile.com</span><br />to bring our premier healthcare to your job site today!</h3>
           </div>
         </div>
       </MediaQuery>
@@ -107,7 +106,7 @@ export const mainInfo = () => (
               <h4><i className="fas fa-arrow-alt-circle-down" /> Work Comp Premiums</h4>
               <h4><i className="fas fa-arrow-alt-circle-down" /> Cost Work</h4>
             </div>
-            <h3 style={{ textAlign: 'left', marginBottom: '1em', fontSize: '145%' }}>Call 855-4TheFIX or email Info@TheChicagoFIXMobile.com<br />to bring our premier healthcare to your job site today!</h3>
+            <h3 style={{ textAlign: 'left', marginBottom: '1em', fontSize: '145%' }}>Call <span style={{ color: '#f9931e' }}>855-4TheFIX</span> or email <span style={{ color: '#f9931e' }}>Info@TheChicagoFIXMobile.com</span><br />to bring our premier healthcare to your job site today!</h3>
           </div>
           <div style={imageBackgroundStyle} />
         </div>
