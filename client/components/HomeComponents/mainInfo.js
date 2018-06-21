@@ -95,17 +95,17 @@ export const mainInfo = () => (
           <div style={{ width: '30vw', height: 'auto' }}>
             <h4>Offering an Increase in</h4>
             <div style={{ display: 'flex', flexDirection: 'column', marginLeft: "5%", marginRight: "5%", marginBottom: '2.5%', color: "#f9931e" }}>
-              <h4><i class="fas fa-arrow-alt-circle-up" />  Work Site Safety</h4>
-              <h4><i class="fas fa-arrow-alt-circle-up" />  Employee Wellness</h4>
-              <h4><i class="fas fa-arrow-alt-circle-up" />  Increase Productivity</h4>
-              <h4><i class="fas fa-arrow-alt-circle-up" />  Open New Jobs</h4>
+              <h4><i className="fas fa-arrow-alt-circle-up" />  Work Site Safety</h4>
+              <h4><i className="fas fa-arrow-alt-circle-up" />  Employee Wellness</h4>
+              <h4><i className="fas fa-arrow-alt-circle-up" />  Increase Productivity</h4>
+              <h4><i className="fas fa-arrow-alt-circle-up" />  Open New Jobs</h4>
             </div>
             <h4>Offering a decrease in</h4>
             <div style={{ display: 'flex', flexDirection: 'column', marginLeft: "5%", marginRight: "5%", color: '#f15a29' }}>
-              <h4><i class="fas fa-arrow-alt-circle-down" /> EMR</h4>
-              <h4><i class="fas fa-arrow-alt-circle-down" /> OSHA Rates</h4>
-              <h4><i class="fas fa-arrow-alt-circle-down" /> Work Comp Premiums</h4>
-              <h4><i class="fas fa-arrow-alt-circle-down" /> Cost Work</h4>
+              <h4><i className="fas fa-arrow-alt-circle-down" /> EMR</h4>
+              <h4><i className="fas fa-arrow-alt-circle-down" /> OSHA Rates</h4>
+              <h4><i className="fas fa-arrow-alt-circle-down" /> Work Comp Premiums</h4>
+              <h4><i className="fas fa-arrow-alt-circle-down" /> Cost Work</h4>
             </div>
             <h3 style={{ textAlign: 'left', marginBottom: '1em', fontSize: '145%' }}>Call 855-4TheFIX or email Info@TheChicagoFIXMobile.com<br />to bring our premier healthcare to your job site today!</h3>
           </div>
