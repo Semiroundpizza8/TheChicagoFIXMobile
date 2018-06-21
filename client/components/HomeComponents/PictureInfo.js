@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 const PictureBackgroundCreator = (props) => {
   const imageBackgroundStyle = {
     display: 'flex',
+    flexWrap: 'wrap',
     flexDirection: 'column',
     textAlign: 'left',
     justifyContent: 'flex-start',
@@ -11,6 +12,8 @@ const PictureBackgroundCreator = (props) => {
     color: 'white',
     width: '50vw',
     height: '40vh',
+    minHeight: '250px',
+    minWidth: '300px',
     alignItems: 'flex-start'
   };
 
@@ -19,7 +22,7 @@ const PictureBackgroundCreator = (props) => {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   } : {
-    backgroundColor: '#0e121c'
+    backgroundColor: '#333'
   }
   return (
       <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', flexWrap: 'wrap' }}>
