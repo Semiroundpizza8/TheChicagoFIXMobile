@@ -6,13 +6,15 @@ const carouselImageCreator = (url, header, text) => {
   const carouselImageStyle = {
     backgroundImage: `url(${url})`,
     backgroundSize: 'cover',
+    backgroundPosition: 'center',
     resize: 'both',
-    width: '900px',
-    height: '500px'
+    width: '100vw',
+    height: '60vh',
+    overflow: 'hidden'
   }
   return (
     <Carousel.Item >
-      <div style={carouselImageStyle} alt="900x500" src={url} />
+      <div style={carouselImageStyle} />
       <Carousel.Caption>
         <h3>{header}</h3>
         <p>{text}</p>
@@ -23,9 +25,9 @@ const carouselImageCreator = (url, header, text) => {
 
 export const CarouselComponent = () => (
   <Carousel>
-    {carouselImageCreator('./assets/busSide.jpg', 'Injury & Illness Prevention', 'Nulla vitae elit libero, a pharetra augue mollis interdum.')}
-    {carouselImageCreator('./assets/busSide.jpg', 'Ergonomics', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')}
-    {carouselImageCreator('./assets/busSide.jpg', 'Wellness Services', 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.')}
+    {carouselImageCreator('./assets/pictures/DSC_0426.jpg', 'Injury & Illness Prevention', '')}
+    {carouselImageCreator('./assets/pictures/DSC_0558.jpg', 'Ergonomics', '')}
+    {carouselImageCreator('./assets/pictures/DSC_0580.jpg', 'Wellness Services', '')}
   </Carousel>
 )
 
