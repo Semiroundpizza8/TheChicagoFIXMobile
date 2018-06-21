@@ -27,7 +27,9 @@ const imageBackgroundStyle = {
   alignItems: 'flex-start',
   backgroundImage: `url('./assets/pictures/PatientsRot.jpg')`,
   backgroundSize: 'cover',
+  backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
+  borderRadius: '40px'
 };
 
 export const mainInfo = () => (
@@ -36,6 +38,7 @@ export const mainInfo = () => (
       <img src="./assets/MobileLogo.svg" style={{ width: '80vw', maxWidth: '700px', zIndex: '4' }} />
       <h1><b>Using a proactive approach in sports medicine to prevent injuries and keep employees performing at their best.</b></h1>
       <p style={{ width: '50vw' }}>At the Chicago FIX Mobile, we bring the same treatment that professional athletes use to stay at the top of their game right to your job site to keep your employees performing at the top of theirs.</p>
+      <h3 style={{ textAlign: 'left', marginBottom: '1em', fontSize: '145%' }}>Call 855-4TheFIX or email Info@TheChicagoFIXMobile.com<br />to bring our premier healthcare to your job site today!</h3>
       <div style={{ listStyle: 'none', display: 'flex', justifyContent: 'space-between', flexDirection: 'row', marginTop: '2em' }}>
         <div style={{width: '30vw', height: 'auto' }}>
           <h4>Offering a decrease in</h4>
@@ -56,7 +59,6 @@ export const mainInfo = () => (
         <div style={imageBackgroundStyle} />
 
       </div>
-      <h3 style={{ textAlign: 'left', marginBottom: '1em' }}>Call 855-4TheFIX or email Info@TheChicagoFIXMobile.com <br />to bring our premiere healthcare to your jobsite today!</h3>
     </div >
     {/* <div style={blackTextboxContainers}>
       <h1>At The Chicago FIX Mobile, we offer:</h1>

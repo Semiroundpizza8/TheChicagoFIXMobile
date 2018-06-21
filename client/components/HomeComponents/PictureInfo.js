@@ -80,21 +80,21 @@ export const PictureInfo = () => (
         <p>We will teach your employees proper lifting and moving techniques in order to avoid the most common workplace injuries including low back pain, cervical strain, and repetitive injuries.</p>
       </MobilePictureBackgroundCreator>
       <MobilePictureBackgroundCreator>
-        <h1>Strength/Conditioning</h1>
+        <h1>Strength/ Conditioning</h1>
         <p>Our certified personal trainers will come out to your job sites to lead your employees in a group stretch and warm sessions in order to prepare their bodies for an injury free work day. Our trainers will stay on site to advise your employees on appropriate fitness and diet routines to reach their goals in a healthy and sustainable manner.</p>
       </MobilePictureBackgroundCreator>
     </MediaQuery>
     <MediaQuery query='(min-width: 600px)'>
       <PictureBackgroundCreator url="./assets/Red1.jpg">
         <h1>Immediate Injury Assessment</h1>
-        <p>We will be there to assess and treat on –site any musculoskeletal injuries that may be plaguing your employees. With us, your employees will avoid the long wait times of the emergency departments and walk-in clinics as well as avoiding unnecessary medical treatment.</p>
+        <p>We will be there to assess and treat on–site any musculoskeletal injuries that may be plaguing your employees. With us, your employees will avoid the long wait times of the emergency departments and walk-in clinics as well as avoiding unnecessary medical treatment.</p>
       </PictureBackgroundCreator>
       <PictureBackgroundCreator>
         <h1>Wellness Screenings</h1>
         <p>We will come to your offices or job sites and screen your employees’ vital signs, cholesterol levels, and blood glucose levels. Our staff will then advise your employees on what is needed in order to get their levels to an appropriate healthy level.</p>
       </PictureBackgroundCreator>
       <PictureBackgroundCreator>
-        <h1>Strength/Conditioning</h1>
+        <h1>Strength/ Conditioning</h1>
         <p>Our certified personal trainers will come out to your job sites to lead your employees in a group stretch and warm sessions in order to prepare their bodies for an injury free work day. Our trainers will stay on site to advise your employees on appropriate fitness and diet routines to reach their goals in a healthy and sustainable manner.</p>
       </PictureBackgroundCreator>
       <PictureBackgroundCreator url="./assets/Red2.jpg">

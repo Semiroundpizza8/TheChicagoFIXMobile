@@ -19,6 +19,7 @@ export class Contact extends React.Component {
       name: this.state.name,
       content: this.state.content
     }
+    this.setState({email: '', name: '', content: ''})
     console.log(body)
     axios.post('/api/email', body).then(() => { console.log("POSTED EMAIL") })
   }
@@ -28,7 +29,6 @@ export class Contact extends React.Component {
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '5vh', backgroundColor: 'white' }}>
         <div style={{ width: '60vw'}}>
           <h1 style={{ textAlign: 'center', marginBottom: '1em' }}>Contact Us Today</h1>
-          <h3 style={{ textAlign: 'center', marginBottom: '1em' }}>Call 855-4TheFIX or email Info@TheChicagoFIXMobile.com to schedule an applointment today!</h3>
         </div>
         <form onSubmit={this.handleSubmit} style={{ display: 'flex', flexDirection: 'column', textAlign: 'center', justifyContent: 'center', alignItems: 'center', marginTop: '20px' }}>
           <label>Name</label>
@@ -39,6 +39,7 @@ export class Contact extends React.Component {
           <textarea value={this.state.content} onChange={(e) => { this.setState({ content: e.target.value }) }} style={{ border: '1px solid #88D5E9', marginBottom: '3em', width: '70vw' }} />
           <input type="submit" style={{ marginBottom: '3em', width: '100px' }} />
         </form>
+        <h4 style={{ textAlign: 'center', marginBottom: '1em' }}>Call 855-4TheFIX or email Info@TheChicagoFIXMobile.com <br />to bring our premier healthcare to your job site today!</h4>
       </div>
     )
   }
