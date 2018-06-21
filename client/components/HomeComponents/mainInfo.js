@@ -56,7 +56,7 @@ export const mainInfo = () => (
       <img src="./assets/MobileLogo.svg" style={{ width: '80vw', maxWidth: '700px', zIndex: '4' }} />
       <h1><b>Using a proactive approach in sports medicine to prevent injuries and keep employees performing at their best.</b></h1>
       <p style={{ width: '50vw' }}>At the Chicago FIX Mobile, we bring the same treatment that professional athletes use to stay at the top of their game right to your job site to keep your employees performing at the top of theirs.</p>
-      <h1>We offer:</h1>
+      {/* <h1>We offer:</h1>
       <p> Chiropractic Care
         <br />Compression Ice Therapy
         <br />Thermotherapy
@@ -65,7 +65,7 @@ export const mainInfo = () => (
         <br />Wellness Services
         <br />Injury Evaluation
         <br />Rehabilitation
-      </p>
+      </p> */}
       <MediaQuery query='(max-width: 600px)'>
         <div style={{ listStyle: 'none', display: 'flex', justifyContent: 'space-between', flexDirection: 'column', marginTop: '2em' }}>
             <div>
@@ -85,6 +85,8 @@ export const mainInfo = () => (
               <h4><Glyphicon glyph="arrow-up" /> Increase Productivity</h4>
               <h4><Glyphicon glyph="arrow-up" /> Open New Jobs</h4>
             </div>
+            <h3 style={{ textAlign: 'left', marginBottom: '1em', fontSize: '145%' }}>Call 855-4TheFIX or email Info@TheChicagoFIXMobile.com<br />to bring our premier healthcare to your job site today!</h3>
+
             </div>
         </div>
       </MediaQuery>
@@ -105,11 +107,11 @@ export const mainInfo = () => (
               <h4><Glyphicon glyph="arrow-up" /> Increase Productivity</h4>
               <h4><Glyphicon glyph="arrow-up" /> Open New Jobs</h4>
             </div>
+            <h3 style={{ textAlign: 'left', marginBottom: '1em', fontSize: '145%' }}>Call 855-4TheFIX or email Info@TheChicagoFIXMobile.com<br />to bring our premier healthcare to your job site today!</h3>
           </div>
           <div style={imageBackgroundStyle} />
         </div>
       </MediaQuery>
-      <h3 style={{ textAlign: 'left', marginBottom: '1em', fontSize: '145%' }}>Call 855-4TheFIX or email Info@TheChicagoFIXMobile.com<br />to bring our premier healthcare to your job site today!</h3>
     </div >
   </div >
 )

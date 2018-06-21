@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Carousel } from 'react-bootstrap';
 import MediaQuery from 'react-responsive';
 
-const carouselImageCreator = (url, header, text, special) => {
+const carouselImageCreator = (url, header, text, altURL) => {
   const carouselImageStyle = {
     backgroundImage: `url(${url})`,
     backgroundSize: 'cover',
@@ -14,7 +14,7 @@ const carouselImageCreator = (url, header, text, special) => {
     overflow: 'hidden'
   }
   const specialCarouselImageStyle = {
-    backgroundImage: `url('./assets/pictures/PatientsRot.jpg')`,
+    backgroundImage: `url(${altURL})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     resize: 'both',
@@ -22,7 +22,7 @@ const carouselImageCreator = (url, header, text, special) => {
     height: '60vh',
     overflow: 'hidden'
   }
-  return special ? (
+  return altURL ? (
     (
       <Carousel.Item >
         <MediaQuery query='(max-width: 600px)'>
@@ -51,8 +51,8 @@ const carouselImageCreator = (url, header, text, special) => {
 export const CarouselComponent = () => (
   <Carousel>
     {carouselImageCreator('./assets/pictures/DSC_0426_long.jpg', 'Injury & Illness Prevention', '')}
-    {carouselImageCreator('./assets/pictures/DSC_0524_long.jpg', 'Ergonomics', '', true)}
-    {carouselImageCreator('./assets/pictures/DSC_0580_long.jpg', 'Wellness Services', '')}
+    {carouselImageCreator('./assets/pictures/DSC_0565_long.jpg', 'Ergonomics', '', './assets/pictures/PatientsRot.jpg')}
+    {carouselImageCreator('./assets/pictures/DSC_0480_long.jpg', 'Wellness Services', '',  './assets/pictures/mobOffice.jpg')}
   </Carousel>
 )
 
