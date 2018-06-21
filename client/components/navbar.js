@@ -17,7 +17,7 @@ const NavbarComponent = () => (
 
       <Nav pullRight>
         <NavItem eventKey={1} href="/">Home</NavItem>
-        <NavItem eventKey={2} href="/About">About</NavItem>
+        {/* <NavItem eventKey={2} href="/About">About</NavItem> */}
       </Nav>
       
     </Navbar.Collapse>
