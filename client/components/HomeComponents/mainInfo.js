@@ -68,44 +68,44 @@ export const mainInfo = () => (
       </p> */}
       <MediaQuery query='(max-width: 600px)'>
         <div style={{ listStyle: 'none', display: 'flex', justifyContent: 'space-between', flexDirection: 'column', marginTop: '2em' }}>
-            <div>
-            <h4>Offering a decrease in</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', marginLeft: "5%", marginRight: "5%", color: '#f15a29' }}>
-              <h4><Glyphicon glyph="arrow-down" /> EMR</h4>
-              <h4><Glyphicon glyph="arrow-down" /> OSHA Rates</h4>
-              <h4><Glyphicon glyph="arrow-down" /> Work Comp Premiums</h4>
-              <h4><Glyphicon glyph="arrow-down" /> Cost Work</h4>
-            </div>
-            </div>
-            <div>
+          <div>
             <h4>Offering an Increase in</h4>
             <div style={{ display: 'flex', flexDirection: 'column', marginLeft: "5%", marginRight: "5%", marginBottom: '2.5%', color: "#f9931e" }}>
-              <h4><Glyphicon glyph="arrow-up" /> Work Site Safety</h4>
-              <h4><Glyphicon glyph="arrow-up" /> Employee Wellness</h4>
-              <h4><Glyphicon glyph="arrow-up" /> Increase Productivity</h4>
-              <h4><Glyphicon glyph="arrow-up" /> Open New Jobs</h4>
+              <h4><i class="fas fa-arrow-alt-circle-up" />  Work Site Safety</h4>
+              <h4><i class="fas fa-arrow-alt-circle-up" />  Employee Wellness</h4>
+              <h4><i class="fas fa-arrow-alt-circle-up" />  Increase Productivity</h4>
+              <h4><i class="fas fa-arrow-alt-circle-up" />  Open New Jobs</h4>
             </div>
+            <h4>Offering a decrease in</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', marginLeft: "5%", marginRight: "5%", color: '#f15a29' }}>
+              <h4><i class="fas fa-arrow-alt-circle-down" /> EMR</h4>
+              <h4><i class="fas fa-arrow-alt-circle-down" /> OSHA Rates</h4>
+              <h4><i class="fas fa-arrow-alt-circle-down" /> Work Comp Premiums</h4>
+              <h4><i class="fas fa-arrow-alt-circle-down" /> Cost Work</h4>
+            </div>
+          </div>
+          <div>
             <h3 style={{ textAlign: 'left', marginBottom: '1em', fontSize: '145%' }}>Call 855-4TheFIX or email Info@TheChicagoFIXMobile.com<br />to bring our premier healthcare to your job site today!</h3>
 
-            </div>
+          </div>
         </div>
       </MediaQuery>
       <MediaQuery query='(min-width: 600px)'>
         <div style={{ listStyle: 'none', display: 'flex', justifyContent: 'space-between', flexDirection: 'row', marginTop: '2em' }}>
           <div style={{ width: '30vw', height: 'auto' }}>
-            <h4>Offering a decrease in</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', marginLeft: "5%", marginRight: "5%", color: '#f15a29' }}>
-              <h4><Glyphicon glyph="arrow-down" /> EMR</h4>
-              <h4><Glyphicon glyph="arrow-down" /> OSHA Rates</h4>
-              <h4><Glyphicon glyph="arrow-down" /> Work Comp Premiums</h4>
-              <h4><Glyphicon glyph="arrow-down" /> Cost Work</h4>
-            </div>
             <h4>Offering an Increase in</h4>
             <div style={{ display: 'flex', flexDirection: 'column', marginLeft: "5%", marginRight: "5%", marginBottom: '2.5%', color: "#f9931e" }}>
-              <h4><Glyphicon glyph="arrow-up" /> Work Site Safety</h4>
-              <h4><Glyphicon glyph="arrow-up" /> Employee Wellness</h4>
-              <h4><Glyphicon glyph="arrow-up" /> Increase Productivity</h4>
-              <h4><Glyphicon glyph="arrow-up" /> Open New Jobs</h4>
+              <h4><i class="fas fa-arrow-alt-circle-up" />  Work Site Safety</h4>
+              <h4><i class="fas fa-arrow-alt-circle-up" />  Employee Wellness</h4>
+              <h4><i class="fas fa-arrow-alt-circle-up" />  Increase Productivity</h4>
+              <h4><i class="fas fa-arrow-alt-circle-up" />  Open New Jobs</h4>
+            </div>
+            <h4>Offering a decrease in</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', marginLeft: "5%", marginRight: "5%", color: '#f15a29' }}>
+              <h4><i class="fas fa-arrow-alt-circle-down" /> EMR</h4>
+              <h4><i class="fas fa-arrow-alt-circle-down" /> OSHA Rates</h4>
+              <h4><i class="fas fa-arrow-alt-circle-down" /> Work Comp Premiums</h4>
+              <h4><i class="fas fa-arrow-alt-circle-down" /> Cost Work</h4>
             </div>
             <h3 style={{ textAlign: 'left', marginBottom: '1em', fontSize: '145%' }}>Call 855-4TheFIX or email Info@TheChicagoFIXMobile.com<br />to bring our premier healthcare to your job site today!</h3>
           </div>
