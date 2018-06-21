@@ -12,7 +12,8 @@ export class Contact extends React.Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
     const body = {
       email: this.state.email,
       name: this.state.name,

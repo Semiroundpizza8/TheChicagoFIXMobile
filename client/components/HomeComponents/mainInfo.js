@@ -19,7 +19,7 @@ export const mainInfo = () => (
   <div style={blackTextboxContainers}>
     <div style={{ width: '75vw', textAlign: 'left'}} >
       <h1><b>Using a proactive approach in sports medicine to prevent injuries and keep employees performing at their best.</b></h1>
-      <p style={{ width: '50vw'}}>At the Chicago FIX Mobile we bring the same treatment that professional athletes use to stay at the top of their game right to your jobsite to keep your employees performing at the top of theirs.</p>
+      <p style={{ width: '50vw'}}>At the Chicago FIX Mobile, we bring the same treatment that professional athletes use to stay at the top of their game right to your job site to keep your employees performing at the top of theirs.</p>
       <div style={{ listStyle: 'none', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'column', marginTop: '2em' }}>
           <h4>Offering a decrease in</h4>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginLeft: "5%", marginRight: "5%", color: '#f15a29' }}>
