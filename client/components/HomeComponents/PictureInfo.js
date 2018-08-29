@@ -66,7 +66,7 @@ const PictureBackgroundCreator = (props) => {
 
 export const PictureInfo = () => (
   <div style={{ display: 'flex', flexFlow: 'row wrap' }}>
-    <MediaQuery query='(max-width: 600px)'>
+    {/* <MediaQuery query='(max-width: 600px)'> */}
       <MobilePictureBackgroundCreator url="./assets/Red1.jpg">
         <h1>Immediate Injury Assessment</h1>
         <p>We will be there to assess and treat on –site any musculoskeletal injuries that may be plaguing your employees. With us, your employees will avoid the long wait times of the emergency departments and walk-in clinics as well as avoiding unnecessary medical treatment.</p>
@@ -83,7 +83,7 @@ export const PictureInfo = () => (
         <h1>Strength/ Conditioning</h1>
         <p>Our certified personal trainers will come out to your job sites to lead your employees in a group stretch and warm sessions in order to prepare their bodies for an injury free work day. Our trainers will stay on site to advise your employees on appropriate fitness and diet routines to reach their goals in a healthy and sustainable manner.</p>
       </MobilePictureBackgroundCreator>
-    </MediaQuery>
+    {/* </MediaQuery>
     <MediaQuery query='(min-width: 600px)'>
       <PictureBackgroundCreator url="./assets/Red1.jpg">
         <h1>Immediate Injury Assessment</h1>
@@ -101,7 +101,7 @@ export const PictureInfo = () => (
         <h1>Preventative Care</h1>
         <p>We will teach your employees proper lifting and moving techniques in order to avoid the most common workplace injuries including low back pain, cervical strain, and repetitive injuries.</p>
       </PictureBackgroundCreator>
-    </MediaQuery>
+    </MediaQuery> */}
   </div>
 )
 export default connect()(PictureInfo);
