@@ -27,11 +27,11 @@ export const LandingPage = () => {
       <MainInfo />
       <PictureInfo />
       {/* Testimonial */}
-      <div style={offwhiteTextboxContainers} >
+      {/* <div style={offwhiteTextboxContainers} >
         <h1>Testimonials</h1>
         <p style={{ width: '33vw' }}>“We have been working with Dr. O and his staff for two years.  Our field workers have really appreciated the opportunity to receive treatment for their aches and pains right on the jobsite.  Each year our safety statistics have improved, and in 2017 we recorded zero lost work days!”</p>
         <p><i> - Steven Brazel, John Burns Construction Company Safety Director</i></p>
-      </div >
+      </div > */}
 
 
 
