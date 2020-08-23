@@ -24,6 +24,7 @@ router.post('/', (req, res, next) => {
       console.log(error);
     } else {
       console.log('Email sent: ' + info.response);
+      res.sendStatus(200)
     }
   })
 })
