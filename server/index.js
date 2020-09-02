@@ -32,6 +32,8 @@ passport.deserializeUser((id, done) =>
     .catch(done))
 
 const createApp = () => {
+  console.log("CREATING")
+
   // logging middleware
   app.use(morgan('dev'))
 
@@ -51,6 +53,8 @@ const createApp = () => {
   }))
   app.use(passport.initialize())
   app.use(passport.session())
+
+  console.log("PASSPORTED")
 
   // auth and api routes
   app.use('/auth', require('./auth'))
@@ -97,7 +101,10 @@ const startListening = () => {
   require('./socket')(io)
 }
 
-const syncDb = () => db.sync()
+const syncDb = () => {
+  console.log("IN SYNC")
+  db.sync()
+}
 
 // This evaluates as true when this file is run directly from the command line,
 // i.e. when we say 'node server/index.js' (or 'nodemon server/index.js', or 'nodemon server', etc)
