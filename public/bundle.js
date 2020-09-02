@@ -597,7 +597,9 @@ function (_React$Component) {
     _this.state = {
       email: '',
       name: '',
-      content: ''
+      content: '',
+      oldName: '',
+      emailSent: false
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
@@ -606,27 +608,32 @@ function (_React$Component) {
   _createClass(Contact, [{
     key: "handleSubmit",
     value: function handleSubmit(e) {
+      var _this2 = this;
+
       e.preventDefault();
       var body = {
         email: this.state.email,
         name: this.state.name,
         content: this.state.content
       };
-      this.setState({
-        email: '',
-        name: '',
-        content: ''
-      });
       console.log(body);
 
       _axios.default.post('/api/email', body).then(function () {
+        _this2.setState({
+          email: '',
+          name: '',
+          content: '',
+          oldName: _this2.state.name,
+          emailSent: true
+        });
+
         console.log("POSTED EMAIL");
       });
     }
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       return _react.default.createElement("div", {
         style: {
@@ -659,7 +666,7 @@ function (_React$Component) {
         type: "text",
         value: this.state.name,
         onChange: function onChange(e) {
-          _this2.setState({
+          _this3.setState({
             name: e.target.value
           });
         },
@@ -672,7 +679,7 @@ function (_React$Component) {
         type: "text",
         value: this.state.email,
         onChange: function onChange(e) {
-          _this2.setState({
+          _this3.setState({
             email: e.target.value
           });
         },
@@ -684,7 +691,7 @@ function (_React$Component) {
       }), _react.default.createElement("label", null, "Comments"), _react.default.createElement("textarea", {
         value: this.state.content,
         onChange: function onChange(e) {
-          _this2.setState({
+          _this3.setState({
             content: e.target.value
           });
         },
@@ -693,7 +700,17 @@ function (_React$Component) {
           marginBottom: '3em',
           width: '70vw'
         }
-      }), _react.default.createElement("input", {
+      }), this.state.emailSent && _react.default.createElement("div", {
+        id: "verify-sent"
+      }, _react.default.createElement("h4", {
+        style: {
+          color: "green"
+        }
+      }, "Thank you ", this.state.oldName, "!"), _react.default.createElement("h4", {
+        style: {
+          color: "green"
+        }
+      }, "Your Email has been sent! If you have any more questions feel free to reach out to Info@TheChicagoFIXMobile.com.")), _react.default.createElement("input", {
         type: "submit",
         style: {
           marginBottom: '3em',
@@ -720,10 +737,6 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.Contact = Contact;
-
-var mapState = function mapState() {};
-
-var mapDispatch = function mapDispatch() {};
 
 var _default = (0, _reactRedux.connect)(null, null)(Contact);
 
