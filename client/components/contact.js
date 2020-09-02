@@ -8,7 +8,9 @@ export class Contact extends React.Component {
     this.state = {
       email: '',
       name: '',
-      content: ''
+      content: '',
+      oldName: '',
+      emailSent: false,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -17,11 +19,20 @@ export class Contact extends React.Component {
     const body = {
       email: this.state.email,
       name: this.state.name,
-      content: this.state.content
+      content: this.state.content,
     }
-    this.setState({email: '', name: '', content: ''})
+    
     console.log(body)
-    axios.post('/api/email', body).then(() => { console.log("POSTED EMAIL") })
+    axios.post('/api/email', body).then(() => { 
+      this.setState({
+        email: '',
+        name: '',
+        content: '',
+        oldName: this.state.name,
+        emailSent: true,
+      });
+      console.log("POSTED EMAIL")
+    })
   }
 
   render() {
@@ -37,19 +48,18 @@ export class Contact extends React.Component {
           <input type="text" value={this.state.email} onChange={(e) => { this.setState({ email: e.target.value }) }} style={{ border: '1px solid #88D5E9', marginBottom: '1em', width: '70vw'}} />
           <label>Comments</label>
           <textarea value={this.state.content} onChange={(e) => { this.setState({ content: e.target.value }) }} style={{ border: '1px solid #88D5E9', marginBottom: '3em', width: '70vw' }} />
+          {this.state.emailSent && (
+            <div id="verify-sent">
+              <h4 style={{ color: "green" }}>Thank you {this.state.oldName}!</h4>
+              <h4 style={{ color: "green" }}>Your Email has been sent! If you have any more questions feel free to reach out to Info@TheChicagoFIXMobile.com.</h4>
+            </div>
+            )}
           <input type="submit" style={{ marginBottom: '3em', width: '100px' }} />
         </form>
         <h4 style={{ textAlign: 'center', marginBottom: '1em' }}>Call <span style={{ color: '#f9931e' }}>855-4TheFIX</span> or email <span style={{ color: '#f9931e' }}>Info@TheChicagoFIXMobile.com</span><br />to bring our premier healthcare to your job site today!</h4>
       </div>
     )
   }
-}
-const mapState = function () {
-
-}
-
-const mapDispatch = function () {
-
 }
 
 export default connect(null, null)(Contact);
