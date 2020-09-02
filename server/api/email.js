@@ -16,8 +16,8 @@ router.post('/', (req, res, next) => {
   const mailOptions = {
     from: process.env.GMAIL_USER,
     to: process.env.DRO,
-    subject: `CONTACT FORM EMAIL FROM ${req.body.name}, ${req.body.email}`,
-    text: req.body.content
+    subject: `CFMobile Form Submission from ${req.body.name}, ${req.body.email}`,
+    text: `"${req.body.content}" - ${req.body.name} (${req.body.email})`
   }
   transporter.sendMail(mailOptions, function(error, info){
     if (error) {

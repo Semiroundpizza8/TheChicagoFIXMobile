@@ -9,7 +9,6 @@ export class Contact extends React.Component {
       email: '',
       name: '',
       content: '',
-      oldName: '',
       emailSent: false,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
