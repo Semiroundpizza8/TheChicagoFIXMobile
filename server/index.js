@@ -83,7 +83,7 @@ const createApp = () => {
 
 const startListening = () => {
   // start listening (and create a 'server' object representing our server)
-  const server = app.listen(process.env.PORT, "0.0.0.0", () => console.log(`Mixing it up on port ${process.env.PORT}`))
+  const server = app.listen(process.env.PORT, () => console.log(`Mixing it up on port ${process.env.PORT}`))
 
   // set up our socket control center
   const io = socketio(server)
