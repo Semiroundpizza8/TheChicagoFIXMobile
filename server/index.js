@@ -71,7 +71,11 @@ const createApp = () => {
 
   // sends index.html
   app.use('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'public/index.html'))
+    try {
+      res.sendFile(path.join(__dirname, '..', 'public/index.html'))
+    } catch(err) {
+      next(err)
+    }
   })
 
   // error handling endware
