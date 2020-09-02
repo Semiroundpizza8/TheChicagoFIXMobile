@@ -12,6 +12,8 @@ const app = express()
 const socketio = require('socket.io')
 module.exports = app
 
+console.log("RUNNING SERVER")
+
 /**
  * In your development environment, you can keep all of your
  * app's secret API keys in a file called `secrets.js`, in your project
@@ -82,8 +84,13 @@ const createApp = () => {
 }
 
 const startListening = () => {
+  const port = process.env.PORT || 8080
+  console.log({
+    port,
+    process: process.env.PORT
+  })
   // start listening (and create a 'server' object representing our server)
-  const server = app.listen(process.env.PORT, () => console.log(`Mixing it up on port ${process.env.PORT}`))
+  const server = app.listen(port, () => console.log(`Mixing it up on port ${port}`))
 
   // set up our socket control center
   const io = socketio(server)
