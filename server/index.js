@@ -8,7 +8,6 @@ const passport = require('passport')
 const SequelizeStore = require('connect-session-sequelize')(session.Store)
 const db = require('./db')
 const sessionStore = new SequelizeStore({db})
-const PORT = process.env.PORT || 8080
 const app = express()
 const socketio = require('socket.io')
 module.exports = app
@@ -71,11 +70,7 @@ const createApp = () => {
 
   // sends index.html
   app.use('*', (req, res) => {
-    try {
       res.sendFile(path.join(__dirname, '..', 'public/index.html'))
-    } catch(err) {
-      next(err)
-    }
   })
 
   // error handling endware
@@ -88,7 +83,7 @@ const createApp = () => {
 
 const startListening = () => {
   // start listening (and create a 'server' object representing our server)
-  const server = app.listen(PORT, () => console.log(`Mixing it up on port ${PORT}`))
+  const server = app.listen(process.env.PORT || 8080, () => console.log(`Mixing it up on port ${process.env.PORT || 8080}`))
 
   // set up our socket control center
   const io = socketio(server)
